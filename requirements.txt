@@ -1,0 +1,8 @@
+#to install all the requirements and dependencies
+#command pip install -r requirements.txt
+Flask
+numpy
+pandas
+scikit-learn==1.2.2
+Flask-SQLAlchmey
+Flask-Mail

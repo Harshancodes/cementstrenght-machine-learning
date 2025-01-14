@@ -1,0 +1,70 @@
+{% extends 'w.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: beige;
+        }
+        h1{
+            font-size: 20px;
+         color:rgb(0, 0, 0);
+         text-align: center;
+        }
+        
+        
+      h2{
+         font-size: 20px;
+         color:rgb(0, 0, 0);
+         text-align: center;
+       }
+      #clname{
+        border:10px solid black;
+        padding :30px;
+        margin:20px 20px 20px 20px;
+       }
+      #clname2{
+        text-align: center;
+        position:relative;
+        top:20px;
+        left:3px;
+        border:10px solid black;
+
+       }
+       img{
+        position:relative;
+        width:190px;
+        height: 190px;
+        left:40%;
+        border:10px solid black;
+       }
+    </style>
+</head>
+<body>
+    <h1>Cement Strenght prediction</h1>
+    <h2>Please enter the below details :</h2>
+    <div id="clname">
+    <form action="{{url_for('hello_world')}}"method="post">
+        <p> ENTER YOUR Cement :  <input type='text' placeholder='Cement' name ='Cement' required='required'/></p>
+        <p> ENTER YOUR Blast Furnace Slag:  <input type='text' name ='BlastFurnaceSlag' placeholder='BlastFurnaceSlag' required='required'/></p>
+        <p> ENTER THE Fly Ash:  <input type='text' name ='FlyAsh' placeholder='FlyAsh' required='required'/></p>
+        <p> ENTER Water:  <input type='text' name ='Water' required='required'/></p>
+        <p> ENTER Superplasticizer:  <input type='text' name ='Superplasticizer' required='required'/></p>
+        <p> ENTER Coarse:  <input type='text' name ='Coarse' required='required'/></p>
+        <p> ENTER Fine Aggregate  <input type='text' name ='FineAggregate' required='required'/></p>
+        <p> ENTER Age <input type='text' name ='Age' required='required'/></p>
+        <button type ='submit'>Predict </button>
+     </form>
+     </div>
+     
+     <div id="clname2">
+    <p> YOUR CEMENT STRENGHT IS  = {{results}} IN Mpa</p>
+   
+    </div>
+</body>
+</html>
+{% endblock body%}
